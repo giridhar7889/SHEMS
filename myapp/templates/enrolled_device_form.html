@@ -1,0 +1,12 @@
+<!-- enrolled_device_form.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Create Enrolled Device</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.model.label_tag }} {{ form.model }}
+    {{ form.location.label_tag }} {{ form.location }}
+    <button type="submit">Save</button>
+</form>
+{% endblock %}

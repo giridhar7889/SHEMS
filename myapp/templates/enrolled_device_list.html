@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Enrolled Devices</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .user-info {
+            margin-bottom: 20px;
+        }
+
+        .location {
+            margin-bottom: 10px;
+        }
+
+        .device-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .device {
+            margin-bottom: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="user-info">
+        <h2>User: {{user_name}}</h2>
+    </div>
+
+    <div class="location">
+        <h3>Location 1 -{{address1}}</h3>
+        <ul class="device-list">
+            <li class="device">AC -3</li>
+            <li class="device">Refrigerator-2</li>
+            <li class="device">Light-10</li>
+        </ul>
+        <a href="{% url 'monitor_consumption' %}" class="btn">monitor Consumption</a>
+    </div>
+
+    <div class="location">
+        <h3>Location 2-{{address2}}</h3>
+        <ul class="device-list">
+            <li class="device">AC-3</li>
+            <li class="device">Refrigerator-2</li>
+            <li class="device">light-2</li>
+        </ul>
+        <a href="{% url 'monitor_consumption' %}" class="btn">Monitor Consumption</a>
+    </div>
+    <div class="location">
+        <h3>Location 3-{{address3}}</h3>
+        <ul class="device-list">
+            <li class="device">AC-5</li>
+            <li class="device">Refrigerator-1</li>
+            <li class="device">light-5</li>
+        </ul>
+        <a href="{% url 'monitor_consumption' %}" class="btn">Monitor Consumption</a>
+    </div>
+    
+    <a href="{% url 'enrolled_consumption' %}" class="btn">Last Month Energy Consumption</a>
+    <a href="{% url 'energyprice' %}" class="btn">Last month Energyprice comparision </a>
+    <a href="{% url 'peak_consumption' %}" class="btn">Last month peak device comparision </a>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+<!-- service_location_confirm_delete.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Confirm Deletion</h2>
+<p>Are you sure you want to delete this service location?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+</form>
+<a href="{% url 'service_location_list' %}">Cancel</a>
+{% endblock %}

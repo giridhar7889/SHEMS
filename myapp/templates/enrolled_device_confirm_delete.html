@@ -1,0 +1,12 @@
+<!-- enrolled_device_confirm_delete.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Confirm Deletion</h2>
+<p>Are you sure you want to delete this enrolled device?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+</form>
+<a href="{% url 'enrolled_device_list' %}">Cancel</a>
+{% endblock %}

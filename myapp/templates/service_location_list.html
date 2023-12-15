@@ -1,0 +1,12 @@
+<!-- service_location_list.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Service Locations</h2>
+<ul>
+    {% for location in locations %}
+    <li>{{ location.address }} - <a href="{% url 'service_location_delete' location.pk %}">Delete</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'service_location_create' %}">Add Service Location</a>
+{% endblock %}

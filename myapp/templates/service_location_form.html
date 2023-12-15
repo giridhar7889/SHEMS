@@ -1,0 +1,16 @@
+<!-- service_location_form.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Create Service Location</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.address.label_tag }} {{ form.address }}
+    {{ form.unit_number.label_tag }} {{ form.unit_number }}
+    {{ form.move_in_date.label_tag }} {{ form.move_in_date }}
+    {{ form.square_footage.label_tag }} {{ form.square_footage }}
+    {{ form.bedrooms.label_tag }} {{ form.bedrooms }}
+    {{ form.occupants.label_tag }} {{ form.occupants }}
+    <button type="submit">Save</button>
+</form>
+{% endblock %}
